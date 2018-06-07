@@ -30,7 +30,9 @@ class LongText implements Criterion<CharSequence> {
 //}
 
 public class Illustrate {
-  public static <E> List<E> getMatchingStrings(List<E> ls, Criterion<E> cs) {
+  public static <E> List<E> getMatchingStrings(
+      List<E> ls, Criterion<? super E> cs)
+  {
     List<E> out = new ArrayList<>();
     for (E s : ls) {
       if (cs.test(s)) {
