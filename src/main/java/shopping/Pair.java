@@ -1,8 +1,8 @@
 package shopping;
 
 public class Pair<E> {
-  private E left;
-  private E right;
+  E left;
+  E right;
 
   public Pair(E left, E right) {
     this.left = left;
@@ -25,11 +25,6 @@ public class Pair<E> {
     this.right = right;
   }
 
-  // ouch, doesn't work!??
-//  public boolean matches() {
-//    return left.getSize() == right.getSize();
-//  }
-//
   @Override
   public String toString() {
     return "Pair{" +
